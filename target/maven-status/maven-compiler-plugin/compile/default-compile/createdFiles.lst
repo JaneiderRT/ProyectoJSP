@@ -1,0 +1,6 @@
+controller\LoginServlet.class
+util\ConfigurationDB.class
+model\ConnectionDB.class
+model\User.class
+controller\LogoutServlet.class
+model\UserDAO.class
