@@ -95,7 +95,6 @@ public class UserDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        System.out.println(userValidated);
         return userValidated;
     }
 }
