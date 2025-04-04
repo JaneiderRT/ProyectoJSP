@@ -11,12 +11,9 @@ import model.ConnectionDB;
 
 public class LogoutServlet extends HttpServlet {
     /**
-     *
+     * Se cierra la sesión del usuario.
      * @param request La solicitud que se realiza, en este caso para el inicio de sesión.
      * @param response La respuesta que se devuelve, dependiendo si el usuario ingresa correctamente
-     * @throws ServletException
-     * @throws IOException
-     * @description Se cierra la sesión del usuario.
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession(false);

@@ -1,7 +1,7 @@
 package model;
 
 public class User {
-    private int id;
+    private Integer id;
     private String name;
     private String lastname;
     private String email;
@@ -9,36 +9,34 @@ public class User {
     private String password;
 
     /**
-     * @description Constructor por defecto.
+     * Constructor por defecto.
      */
     public User() {}
 
     /**
+     * Constructor para realizar la consulta o la eliminación del usuario en particular.
      * @param id Identificador del usuario a buscar o a eliminar.
-     * @description Constructor para realizar la consulta o la eliminación del usuario en particular.
      */
     public User(int id) {
         this.id = id;
     }
 
     /**
-     *
+     * Constructor para que el usuario inicie sesión en el sistema.
      * @param username Es el nombre de usuario reconocido por el sistema para el ingreso.
      * @param password Es la contraseña del usuario para iniciar sesión en el sistema.
-     * @description Constructor para que el usuario inicie sesión en el sistema.
      */
     public User(String username, String password) {
 
     }
 
     /**
-     *
+     * Constructor para crear un usuario en la base de datos.
      * @param name Es el nombre real de la persona que utilizará el sistema.
      * @param lastname Es el apellido de la persona que utilizará el sistema.
      * @param email Es el correo electrónico de la persona que utilizará el sistema.
      * @param username Es el nombre de usuario reconocido por el sistema para el ingreso.
      * @param password Es la contraseña del usuario para iniciar sesión en el sistema.
-     * @description Constructor para crear un usuario en la base de datos.
      */
     public User(String name, String lastname, String email, String username, String password) {
         this.name = name;
@@ -49,13 +47,12 @@ public class User {
     }
 
     /**
-     *
+     * Constructor para listar todos los usuarios existentes de la BDD.
      * @param name Es el nombre real de la persona que utilizará el sistema.
      * @param lastname Es el apellido de la persona que utilizará el sistema.
      * @param email Es el correo electrónico de la persona que utilizará el sistema.
      * @param username Es el nombre de usuario reconocido por el sistema para el ingreso.
      * @param password Es la contraseña del usuario para iniciar sesión en el sistema.
-     * @description Constructor para listar todos los usuarios existentes de la BDD.
      */
     public User(int id, String name, String lastname, String email, String username, String password) {
         this.id = id;

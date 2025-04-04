@@ -1,6 +1,8 @@
-package model;
+package dao;
 
 import jakarta.servlet.http.HttpSession;
+import model.ConnectionDB;
+import model.User;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -8,10 +10,9 @@ import java.util.List;
 
 public class UserDAO {
     /**
-     *
+     * Lista todos los usuarios que existen en la BDD.
+     * @param session Objeto de tipo <code>HttpSession</code> que almacena información de la sesión de un usuario.
      * @return <code>List</code> Una lista de todos los usuarios existentes en la BDD.
-     * @exception SQLException
-     * @description Lista todos los usuarios que existen en la BDD.
      */
     public List<User> userList(HttpSession session) {
         List<User> userList = new ArrayList<User>();
@@ -25,7 +26,7 @@ public class UserDAO {
                 User user = new User(
                         resultSet.getInt("id"),
                         resultSet.getString("name"),
-                        resultSet.getString("last_name"),
+                        resultSet.getString("lastname"),
                         resultSet.getString("email"),
                         resultSet.getString("username"),
                         resultSet.getString("password")
@@ -41,12 +42,39 @@ public class UserDAO {
     }
 
     /**
-     *
+     * Método para crear un usuario en el sistema.
+     * @param user El usuario que se va a crear en el sistema.
+     * @param session La session del usuario que ingreso al sistema.
+     * @return <code>boolean</code> <ul>
+     *     <li><code>true</code> si el usuario fue creado satisfactoriamente. </li>
+     *     <li><code>false</code> Si el usuario no se pudo crear satisfactoriamente.</li>
+     * </ul>
+     */
+    public boolean addUser(User user, HttpSession session) throws SQLException {
+        final String SENTENCE = "insert into parcial1JSP.dbo.users (name, lastname, email, username, password)";
+        String insert = SENTENCE.concat(" values (?, ?, ?, ?, ?)");
+        Connection connection = (Connection) session.getAttribute("connection");
+
+        try(PreparedStatement preparedStatement = connection.prepareStatement(insert);) {
+            preparedStatement.setString(1, user.getName());
+            preparedStatement.setString(2, user.getLastname());
+            preparedStatement.setString(3, user.getEmail());
+            preparedStatement.setString(4, user.getUsername());
+            preparedStatement.setString(5, user.getPassword());
+
+            int rowInsert = preparedStatement.executeUpdate();
+            return rowInsert > 0;
+        }
+    }
+
+    /**
+     * Valida las credenciales del usuario.
      * @param username Es el nombre de usuario reconocido por el sistema para el ingreso.
      * @param password Es la contraseña del usuario para iniciar sesión en el sistema.
-     * @return <code>boolean</code> Indica <code>true</code> si el usuario existe y <code>false</code>
-     *         si el usuario no existe.
-     * @description Valida las credenciales del usuario.
+     * @return <code>boolean</code> <ul>
+     *     <li><code>true</code> si el usuario existe</li>
+     *     <li><code>false</code> si el usuario no existe.</li>
+     * </ul>
      */
     public boolean validateUser(String username, String password) {
         String query = "select * from parcial1JSP.dbo.users where username = ? and password = ?";
