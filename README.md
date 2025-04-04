@@ -43,11 +43,11 @@ La base de datos la manejaremos en **Sql Server**.
 
     Como hacemos una petición GET, este nos devolverá el listado de los usuarios que tengamos en la BDD
 
-    ![NavegadorEndpointGET.PNG](src/main/webapp/assets/img/NavegadorEndpointGET.PNG)
+    ![NavegadorEndpointGET.PNG](src/main/webapp/assets/img/repository/NavegadorEndpointGET.PNG)
 
     Al igual podemos consumir el *endpoint* desde *Postman* Y veremos la misma salida.
 
-    ![PostmanEndpointGET.PNG](src/main/webapp/assets/img/PostmanEndpointGET.PNG)
+    ![PostmanEndpointGET.PNG](src/main/webapp/assets/img/repository/PostmanEndpointGET.PNG)
 
   - **POST:**
 
@@ -65,4 +65,4 @@ La base de datos la manejaremos en **Sql Server**.
 
     Desde *Postman* se vería así:
 
-    ![PostmanEndpointPOST.PNG](src/main/webapp/assets/img/PostmanEndpointPOST.PNG)
+    ![PostmanEndpointPOST.PNG](src/main/webapp/assets/img/repository/PostmanEndpointPOST.PNG)
