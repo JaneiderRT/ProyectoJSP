@@ -100,7 +100,6 @@ public class APIUsers extends HttpServlet {
             return;
         }
 
-        //Crear el método
         boolean isAdded = false;
         try {
             isAdded = userDAO.addUser(newUser, session);
