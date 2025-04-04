@@ -14,9 +14,9 @@ La base de datos la manejaremos en **Sql Server**.
 ## Ejecución Proyecto
 - Al ejecutar el proyecto, nos dirigimos desde el navegador apuntando a [http://localhost:8080/Parcial1](http://localhost:8080/Parcial1)
 
-    Visualizaremos lo siguiente:
+  Visualizaremos lo siguiente:
 
-    ![IndexJSP.PNG](src/main/webapp/assets/img/repository/IndexJSP.PNG)
+  ![IndexJSP.PNG](src/main/webapp/assets/img/repository/IndexJSP.PNG)
 
 - Tendremos por defecto unos usuarios de prueba en la BDD, estos son los que se utilizarán en este ejemplo y se encuentrán en el fuente
   [EstructuraParcialJSP.sql](/src/main/webapp/assets/sql/EstructuraParcialJSP.sql)
@@ -57,7 +57,7 @@ La base de datos la manejaremos en **Sql Server**.
     {
       "name": "xxxx",
       "lastname": "xxxx",
-      "email": "xxxxx@cun.edu.co",
+      "email": "xxxxx@xxxx.com",
       "username": "xxxx",
       "password": "xxxx"
     }
