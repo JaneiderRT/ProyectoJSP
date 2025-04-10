@@ -10,7 +10,7 @@
     // Verifica si ya hay una sesión activa
     HttpSession userSession = request.getSession(false);
     if (userSession != null && userSession.getAttribute("usuario") != null) {
-        response.sendRedirect("UserList.jsp"); // Si ya está autenticado, lo redirige
+        response.sendRedirect("dashboard.html");
         return;
     }
 %>
@@ -20,47 +20,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio De Sesión</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .login-container {
-            background: white;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            width: 300px;
-            text-align: center;
-        }
-        input {
-            width: 90%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            background: #007bff;
-            border: none;
-            color: white;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        button:hover {
-            background: #0056b3;
-        }
-        .error {
-            color: red;
-            font-size: 14px;
-        }
-    </style>
+    <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
 

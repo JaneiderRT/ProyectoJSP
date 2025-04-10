@@ -37,7 +37,7 @@ public class LoginServlet extends HttpServlet {
             }
 
             session.setAttribute("username", username);
-            response.sendRedirect("/Parcial1/views/Dashboard.jsp");
+            response.sendRedirect("/Parcial1/views/dashboard.html");
         }
         else {
             request.getSession().setAttribute("error", "Credenciales Incorrectas");
