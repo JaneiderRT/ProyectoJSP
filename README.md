@@ -46,8 +46,14 @@ La base de datos la manejaremos en **Sql Server**.
 
   ![dashboardHtmlListUsers](src/main/webapp/assets/img/repository/dashboardHtmlListUsers.PNG)
 
-  **Opción "Cerrar Sesión":**
-  - Nota: Esta opción aún se está desarrollando.
+  **Opción "Cerrar Sesión":** Une vez le oprimes en cerrar sesión, aparecerá un mensaje de confirmación; en caso de
+    confirmar, se cerrará la sesión del usuario y se redirigirá al login.
+
+  ![dashboardHtmlLogout](src/main/webapp/assets/img/repository/dashboardHtmlLogout.PNG)
+
+  Redireccionado:
+
+  ![dashboardHtmlLogoutIndexJSP](src/main/webapp/assets/img/repository/dashboardHtmlLogoutIndexJSP.PNG)
 
 
 - También se cuenta con una funcionalidad en API con solo dos métodos los cuáles son ***GET*** y ***POST***
