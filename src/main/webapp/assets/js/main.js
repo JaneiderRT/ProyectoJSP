@@ -26,3 +26,10 @@ document.querySelectorAll('.li-options a').forEach(link => {
         }
     });
 });
+
+function logoutUser(event) {
+    event.preventDefault();
+    if(confirm("¿Estás seguro de que deseas cerrar sesión?")) {
+        window.location.href = "/Parcial1/LogoutServlet"
+    }
+}
