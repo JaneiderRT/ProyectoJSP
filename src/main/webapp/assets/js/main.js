@@ -33,3 +33,19 @@ function logoutUser(event) {
         window.location.href = "/Parcial1/LogoutServlet"
     }
 }
+
+const btn = document.getElementById("btn-theme");
+
+btn.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark-mode');
+
+    const isDark = document.documentElement.classList.contains('dark-mode');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+})
+
+window.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+    }
+});
