@@ -39,8 +39,19 @@ La base de datos la manejaremos en **Sql Server**.
 
   ![dashboardHtmlHome](src/main/webapp/assets/img/repository/dashboardHtmlHome.PNG)
 
-  **Opción "Crear Usuarios":** 
-    - Nota: Esta opción aún se está desarrollando.
+  **Opción "Crear Usuarios":** Se visualizará un formulario, que permité registrar usuarios en el sistema.
+    
+  ![dashboardHtmlCreateUser](src/main/webapp/assets/img/repository/dashboardHtmlCreateUser.PNG)
+
+  Diligenciamos el formulario y oprimimos en el botón **"Crear Usuario"**  
+
+  ![dashboardHtmlCreateUserExample](src/main/webapp/assets/img/repository/dashboardHtmlCreateUserExample.PNG)
+  
+  Al crear el usuario, seremos redirigidos a al inicio del [dashboard.html](src/main/webapp/views/dashboard.html).
+
+  ![dashboardHtml](src/main/webapp/assets/img/repository/dashboardHtml.PNG)
+  
+  Al dirigirnos a la opción de ver usuarios visualizaremos el usuario creado.
   
   **Opción "Ver Usuarios:"** Se Visualizará una tabla con los correspondientes usuarios registrados en el sistema.
 
@@ -54,6 +65,14 @@ La base de datos la manejaremos en **Sql Server**.
   Redireccionado:
 
   ![dashboardHtmlLogoutIndexJSP](src/main/webapp/assets/img/repository/dashboardHtmlLogoutIndexJSP.PNG)
+
+  Adicionalmente en la parte superior derecha, tenemos un botón que nos permite cambiar de modo claro a oscuro y viserversa.
+
+  ![dashboardHtmlDark](src/main/webapp/assets/img/repository/dashboardHtmlDark.PNG)
+
+  ![dashboardHtmlCreateUserDark](src/main/webapp/assets/img/repository/dashboardHtmlCreateUserDark.PNG)
+
+  ![dashboardHtmlListUsersDark](src/main/webapp/assets/img/repository/dashboardHtmlListUsersDark.PNG)
 
 
 - También se cuenta con una funcionalidad en API con solo dos métodos los cuáles son ***GET*** y ***POST***
