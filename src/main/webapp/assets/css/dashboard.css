@@ -183,6 +183,7 @@ li {
                 font-family: system-ui;
                 border: 1px solid light-dark(rgba(0, 0, 0, 0.384), rgba(255, 255, 255, 0));
                 border-radius: 5px;
+                padding-left: 5px;
             }
 
             input:focus {

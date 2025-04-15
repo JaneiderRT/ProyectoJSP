@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 
-<form id="form-container" method="post">
+<form id="form-container" action="../CreateUser" method="post">
     <div class="group-fields">
         <label for="">Nombres</label>
         <input type="text" name="name" id="name" required>
